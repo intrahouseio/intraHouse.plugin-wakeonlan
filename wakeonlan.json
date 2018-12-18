@@ -4,11 +4,12 @@
   "gendevices": 0,
   "single":0,
   "service": 0,
-  "restartOnChannelsChange":1,
+  "restartOnChannelsChange":0,
   "module": "index.js",
   "params": [],
   "chpattern": [
     { "name": "chan", "note": "$Mac", "type": "string"},
+    { "name": "address", "note": "$Address", "type": "string"},
     { "name": "count", "note": "$Count", "type": "number"},
     { "name": "interval", "note": "$Interval", "type": "number"},
     { "name": "port", "note": "$Port", "type": "number"}
@@ -17,6 +18,7 @@
     "desc": "wakeonlan",
     "dn": "",
     "chan": "20:DE:20:DE:20:DE",
+    "address": "255.255.255.255",
     "count": 3,
     "interval": 100,
     "port": 9
@@ -26,7 +28,5 @@
        "cl": "ActorD"
     }
   },
-  "commands": [
-    { "id": "MANUAL_WAKEONLAN", "name":"$ManualWakeonlan", "reload":true, "noclose":false }
-  ]
+  "commands": []
 }

@@ -1,11 +1,7 @@
 {
-  "Channel": "Channel",
-  "Type": "Type",
-  "Name": "Name",
-  "Mac": "Mac",
-  "Ip": "Ip",
-  "Device": "Device",
-  "Model": "Model",
-  "DeviceSearch": "Device search",
-  "Period": "Device polling time (sec)"
+  "Mac": "Channel",
+  "Address": "The destination address",
+  "Count": "The number of packets to send",
+  "Interval": "The interval between packets in milliseconds",
+  "Port": "The destination port to send to"
 }
