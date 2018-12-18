@@ -2,64 +2,31 @@
   "id": "wakeonlan",
   "description": "Wakeonlan plugin",
   "gendevices": 0,
-  "single": 1,
+  "single":0,
+  "service": 0,
+  "restartOnChannelsChange":1,
   "module": "index.js",
-  "params": [
-      {
-        "name": "period",
-        "note": "$Period",
-        "type": "number",
-        "val": "15"
-      }
-  ],
+  "params": [],
   "chpattern": [
-    {
-      "name": "chan",
-      "note": "$Channel",
-      "type": "string"
-    },
-    {
-      "name": "name",
-      "note": "$Name",
-      "type": "string",
-      "hardlevel": 1
-    },
-    {
-      "name": "mac",
-      "note": "$Mac",
-      "type": "string",
-      "hardlevel": 1
-    },
-    {
-      "name": "type",
-      "note": "$Type",
-      "type": "string",
-      "hardlevel": 1
-    },
-    {
-      "name": "ip",
-      "note": "$Ip",
-      "type": "string",
-      "hardlevel": 1
-    },
-    {
-      "name": "model",
-      "note": "$Model",
-      "type": "string",
-      "hardlevel": 1
-    }
+    { "name": "chan", "note": "$Mac", "type": "string"},
+    { "name": "count", "note": "$Count", "type": "number"},
+    { "name": "interval", "note": "$Interval", "type": "number"},
+    { "name": "port", "note": "$Port", "type": "number"}
   ],
+  "chdefault": {
+    "desc": "wakeonlan",
+    "dn": "",
+    "chan": "20:DE:20:DE:20:DE",
+    "count": 3,
+    "interval": 100,
+    "port": 9
+  },
   "genrules": {
-    "plug": {
-      "type": "550", "cl": "ActorD",
-      "ext": []
-    },
-    "consumption": {
-      "type": "200",
-      "ext": []
+    "wakeonlan": {
+       "cl": "ActorD"
     }
   },
   "commands": [
-    { "id": "DEVICE_SEARCH", "name":"$DeviceSearch", "reload":true, "noclose":false }
+    { "id": "MANUAL_WAKEONLAN", "name":"$ManualWakeonlan", "reload":true, "noclose":false }
   ]
 }

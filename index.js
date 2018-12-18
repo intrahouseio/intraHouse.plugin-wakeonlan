@@ -9,7 +9,7 @@ plugin.on('device_action', (device) => {
 
 plugin.on('toolbar_command', (command) => {
   switch (command.type) {
-    case 'DEVICE_SEARCH':
+    case 'MANUAL_WAKEONLAN':
       break;
     default:
       break;
