@@ -1,5 +1,5 @@
 {
-  "Mac": "Channel",
+  "Mac": "Mac address",
   "Address": "The destination address",
   "Count": "The number of packets to send",
   "Interval": "The interval between packets in milliseconds",
